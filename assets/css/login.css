@@ -1,0 +1,201 @@
+/* ============================================================
+   EduManage Pro — Login Page Styles
+   assets/css/login.css
+   ============================================================ */
+
+.login-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #F8FAFC;
+}
+
+.login-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ── Left Panel ─────────────────────────────────────────────── */
+.login-left {
+    width: 420px;
+    flex-shrink: 0;
+    background: linear-gradient(160deg, #0B1D3A 0%, #112347 50%, #0d2240 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative circles */
+.login-left::before,
+.login-left::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(244,185,66,.06);
+}
+.login-left::before { width: 400px; height: 400px; top: -100px; right: -150px; }
+.login-left::after  { width: 300px; height: 300px; bottom: -80px; left: -80px;  }
+
+.login-left-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.login-logo { margin-bottom: 20px; }
+.login-logo-icon {
+    width: 80px; height: 80px;
+    background: #F4B942;
+    border-radius: 20px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 42px;
+    box-shadow: 0 8px 32px rgba(244,185,66,.3);
+}
+.school-logo-img {
+    width: 80px; height: 80px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+.login-school-name {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+.login-motto {
+    color: #F4B942;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 36px;
+    font-style: italic;
+}
+
+.login-features { width: 100%; }
+.login-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(255,255,255,.06);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    color: rgba(255,255,255,.85);
+    font-size: 13.5px;
+    font-weight: 500;
+}
+.login-feature-item span { font-size: 18px; }
+
+.login-left-footer {
+    padding: 16px 40px;
+    font-size: 12px;
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.06);
+    position: relative; z-index: 1;
+}
+
+/* ── Right Panel ────────────────────────────────────────────── */
+.login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    background: #F8FAFC;
+}
+
+.login-card {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 32px rgba(0,0,0,.08);
+    border: 1px solid #E2E8F0;
+}
+
+.login-card-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+.login-card-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1E293B;
+    margin: 0 0 6px;
+}
+.login-card-header p {
+    color: #64748B;
+    font-size: 14px;
+    margin: 0;
+}
+
+.btn-login {
+    margin-top: 8px;
+    padding: 13px;
+    font-size: 15px;
+    background: #0B1D3A;
+    border-radius: 10px;
+}
+
+.login-note {
+    margin-top: 20px;
+    padding: 12px 14px;
+    background: #FEF3C7;
+    border-radius: 8px;
+    border: 1px solid #FDE68A;
+    font-size: 12.5px;
+    color: #92400E;
+    line-height: 1.5;
+}
+
+/* Demo credentials */
+.demo-credentials {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: #F8FAFC;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+}
+.demo-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #94A3B8;
+    margin-bottom: 8px;
+}
+.demo-row {
+    font-size: 12.5px;
+    color: #64748B;
+    margin-bottom: 4px;
+    font-family: 'Courier New', monospace;
+}
+.demo-role {
+    font-weight: 700;
+    color: #1E293B;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .login-wrapper  { flex-direction: column; }
+    .login-left     { width: 100%; min-height: 220px; }
+    .login-left-inner { padding: 28px 24px; flex-direction: row; flex-wrap: wrap; gap: 16px; }
+    .login-logo     { margin-bottom: 0; }
+    .login-features { display: none; }
+    .login-school-name { font-size: 18px; }
+    .login-card     { padding: 28px 22px; }
+}
