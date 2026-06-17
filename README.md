@@ -16,7 +16,9 @@ Step 8 DELETE fix_passwords.php from your server immediately after running it. T
 security.
 Step 9 Go to http://localhost/edumanage/login.php and log in with admin / admin123. Change this password immediately after first login — these are setup-only credentials and must not be used in any live deployment.
 
-■ Always delete fix_passwords.php after running it. Leaving it on your server is a security risk.
+■ Password Setup
+On first install, default credentials (admin / admin123) are seeded into the database via database_FIXED.sql. A one-time password-hashing utility was used during initial setup and has since been removed from this repository for security reasons. Always change default credentials immediately after first login in any deployment.
+Always delete fix_passwords.php after running it. Leaving it on your server is a security risk.
 Folder Permissions
 The following folders must be writable by your web server (chmod 755 on Linux):
 • uploads/logos/
